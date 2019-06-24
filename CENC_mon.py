@@ -5,7 +5,7 @@ phonenum = '17127290868'  # 接收通知的手机号
 print_flag = True  # 是否打印详细信息 True / False
 notify_level = 4  # 预设震级
 notify_location = '四川'  # 预设监控地区
-interval = 5  # 监控间隔 秒
+interval = 30  # 监控间隔 秒
 
 
 def monitor():  # 监控模块
@@ -47,7 +47,7 @@ def monitor():  # 监控模块
                             sender()  # 发通知
 
             else:
-                print('[*]最近24小时内没有发生地震\n')
+                print('[*]最近24小时内没有发生地震，或遭遇WAF拦截\n')
 
         except Exception as e:
             print('[!]获取信息失败 \n', e)
